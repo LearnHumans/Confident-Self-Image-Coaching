@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Self-Image Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f5f9; /* Light blue background */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: #2980b9; /* Dark blue hero background */
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before, .hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: 1;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .hero::before {
+            width: 300px;
+            height: 300px;
+            top: -50px;
+            left: -50px;
+            transform: scale(1.2);
+        }
+
+        .hero::after {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            right: -50px;
+            transform: scale(1.2);
+        }
+
+        .hero:hover::before, .hero:hover::after {
+            transform: scale(1);
+        }
+
+        .hero .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: 1;
+        }
+
+        .hero .shape.shape1 {
+            width: 200px;
+            height: 200px;
+            top: 100px;
+            left: -100px;
+            animation: float 6s ease-in-out infinite alternate;
+        }
+
+        .hero .shape.shape2 {
+            width: 150px;
+            height: 150px;
+            bottom: 100px;
+            right: -75px;
+            animation: float 8s ease-in-out infinite alternate-reverse;
+        }
+
+        .hero .shape.shape3 {
+            width: 250px;
+            height: 250px;
+            top: 200px;
+            right: -125px;
+            animation: float 7s ease-in-out infinite alternate;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 3em;
+            position: relative;
+            z-index: 2;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif; /* Modern font for header */
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            position: relative;
+            z-index: 2;
+            margin: 20px 0;
+        }
+
+        .hero button {
+            background: #2ecc71; /* Green button */
+            color: #fff;
+            border: 0;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 1.2em;
+            position: relative;
+            z-index: 2;
+            border-radius: 30px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero button:hover {
+            background: #27ae60; /* Darker green on hover */
+            transform: scale(1.1);
+        }
+
+        .section {
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-color: #fff; /* White background for sections */
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #2980b9; /* Dark blue section heading */
+            position: relative;
+            display: inline-block;
+            font-family: 'Poppins', sans-serif; /* Modern font for section headers */
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #2980b9; /* Dark blue underline */
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .section .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .section .content .item {
+            flex: 1 1 300px;
+            margin: 20px;
+            padding: 30px;
+            background: #ecf0f1; /* Light blue item background */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section .content .item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .section .content .item h3 {
+            margin-top: 20px;
+            font-size: 1.8em;
+            font-weight: 500;
+            color: #333;
+            font-family: 'Poppins', sans-serif; /* Modern font for item headers */
+        }
+
+        .cta {
+            background: #3498db; /* Blue CTA background */
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before, .cta::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: 1;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .cta::before {
+            width: 200px;
+            height: 200px;
+            top: -50px;
+            left: -50px;
+            transform: scale(1.2);
+        }
+
+        .cta::after {
+            width: 150px;
+            height: 150px;
+            bottom: -50px;
+            right: -50px;
+            transform: scale(1.2);
+        }
+
+        .cta:hover::before, .cta:hover::after {
+            transform: scale(1);
+        }
+
+        .cta .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: 1;
+        }
+
+        .cta .shape.shape1 {
+            width: 200px;
+            height: 200px;
+            top: 50px;
+            left: -100px;
+            animation: float 7s ease-in-out infinite alternate-reverse;
+        }
+
+        .cta .shape.shape2 {
+            width: 150px;
+            height: 150px;
+            bottom: 100px;
+            right: -75px;
+            animation: float 6s ease-in-out infinite alternate;
+        }
+
+        .cta .shape.shape3 {
+            width: 250px;
+            height: 250px;
+            top: 150px;
+            right: -125px;
+            animation: float 8s ease-in-out infinite alternate;
+        }
+
+        .cta h2 {
+            font-size: 2.5em;
+            position: relative;
+            z-index: 2;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif; /* Modern font for CTA header */
+        }
+
+        .cta button {
+            background: #2ecc71; /* Green button */
+            color: #fff;
+            border: 0;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 1.2em;
+            position: relative;
+            z-index: 2;
+            border-radius: 30px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta button:hover {
+            background: #27ae60; /* Darker green on hover */
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: #ecf0f1; /* Lighter blue footer background */
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .story {
+            margin-top: 30px;
+        }
+
+        .testimonials {
+            background-color: #fff; /* White background for testimonials section */
+            padding: 60px 0;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #2980b9; /* Dark blue testimonials heading */
+            position: relative;
+            display: inline-block;
+            font-family: 'Poppins', sans-serif; /* Modern font for testimonials header */
+            text-align: center;
+            width: 100%; /* Ensures the header is centered */
+        }
+
+        .testimonials h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #2980b9; /* Dark blue underline */
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .testimonials .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .testimonials .content .item {
+            flex: 1 1 300px;
+            margin: 20px;
+            padding: 30px;
+            background: #ecf0f1; /* Light blue item background */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonials .content .item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonials .content .item p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .testimonials .content .item h3 {
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #333;
+            font-family: 'Poppins', sans-serif; /* Modern font for testimonial author */
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+            <h2>Do you want to be more confident?</h2>
+            <p>Discover the strategies to build unshakable confidence and improve your self-image.</p>
+            <a href="https://buy.stripe.com/9AQbKy4Lect11m85km"><button>Get Your Copy Now</button></a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="color:#2980b9;">My Story</h2>
+            <div class="content">
+                <div class="item story">
+                    <p>In 2021, I tore the PCL in my left knee. Life was put on pause and I finished the rest of my freshman year bedridden in my dorm room. Full recovery took an entire year after the surgery. During that time, I gained weight, lost strength, and my confidence. Angry and frustrated with my situation, I struggled to make progress in anything I was doing. I felt unsure and nervous about everything. Even after making a successful recovery, I still felt like the same sad and stuck freshman lying in my dorm room. I saw the people around me moving on in their careers and realized I couldn't keep living like this. I had already been watching self-improvement content at the time, but all of it was just the same. I decided to read books on self-image and how to change not only physically but mentally as well. I got myself out of this year-long rut through incremental steps and daily habits. I got in shape again, got rid of my fear of going out, and became more comfortable with the uncomfortable. <b>I gained my confidence again and now I teach people to do the same.</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="color:#2980b9;">What You Will Receive</h2>
+            <div class="content">
+                <div class="item">
+                    <h3>FUll GUIDE: How to gain confidence by updating your self-image</h3>
+                    <p>This guide is a culmination of all the things I learned in my experience, put into easy and informational steps anyone can follow. It goes through self-image techniques, habits, practices and much more to take you from your current state to a more <b>confident and charismatic identity</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="color:#2980b9;">Bonus</h2>
+            <div class="content">
+                <div class="item">
+                    <p><b>Private and group video coaching ($15)</b></p>
+                    <p><b>Visualization methods ($5)</b></p>
+                    <p><b>Guided affirmation meditation ($10)</b></p>
+                    <p><b>Customizable habit tracker ($7)</b></p>
+                    <p><b>Accountability chat (5$)</b></p>
+                    <p><b>Journaling methods ($5)</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <p><b>P.S.</b> <i>The value of the guide and bonus content is $67 and it only costs $10.</i></p>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="content">
+                <div class="item">
+                    <p>"His coaching seriously helped improve my life in college. I became way more social and approachable." </p>
+                    <h3>- Yoel G.</h3>
+                </div>
+                <div class="item">
+                    <p>"I didn't even know I was capable of changing this much in such a short period of time. The coaching was great and I'm sure the guide is fantastic."</p>
+                    <h3>- Adithya P.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+            <h2>Start Your Transformation Today</h2>
+            <a href="https://buy.stripe.com/9AQbKy4Lect11m85km"><button>Get Your Guide Now</button></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LearnHumans. All rights reserved.</p>
+    </footer>
+</body>
+</html>
