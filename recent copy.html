@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Image Transformation Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Carousel Styling */
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .carousel-control:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-control.left {
+            left: 10px;
+        }
+
+        .carousel-control.right {
+            right: 10px;
+        }
+
+        .carousel-control:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+    </style>
+</head>
+
+<body class="bg-white font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="flex flex-col p-4 bg-blue-600 shadow">
+        <div class="flex items-center justify-between">
+            <div class="text-2xl font-bold text-white">HOW TO UPDATE YOUR SELF-IMAGE</div>
+            <div class="flex items-center space-x-12">
+                <ul class="flex space-x-8 text-lg">
+                    <li><a href="https://www.reddit.com/r/LearnHumans/" class="text-white hover:text-gray-200">Blog</a></li>
+                    <li><a href="https://discord.gg/KWBV68p2Tk" class="text-white hover:text-gray-200">Free Guides</a></li>
+                    <li><a href="mailto:learnhumans888@gmail.com" class="text-white hover:text-gray-200">Contact</a></li>
+                </ul>
+                <!-- Logo Placeholder -->
+                <div>
+                    <img src="https://placehold.co/100x50" alt="Your Logo" class="h-10">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Two Buttons -->
+    <section class="relative text-center text-white h-[600px] fade-in"
+        style="background: linear-gradient(to bottom, rgba(37, 99, 235, 0.7), rgba(59, 130, 246, 0.7)), url('https://placehold.co/1920x1080'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 flex flex-col justify-center items-center p-6">
+            <h1 class="text-6xl font-bold mb-6">DISCOVER YOUR TRUE POWER.</h1>
+            <div class="flex space-x-4 mt-6">
+                <button class="px-6 py-3 bg-white text-blue-600 font-semibold rounded transition duration-300 ease-in-out hover:bg-blue-600 hover:text-white active:bg-blue-800">Get Started</button>
+                <button class="px-6 py-3 bg-blue-600 text-white font-semibold rounded transition duration-300 ease-in-out hover:bg-white hover:text-blue-600 active:bg-blue-800">Get a Taste for Free</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="flex flex-col lg:flex-row items-center bg-white p-12 fade-in">
+        <div class="lg:w-1/2 p-8">
+            <h2 class="text-4xl font-bold leading-tight mb-4 text-blue-600">ABOUT SELF-IMAGE TRANSFORMATION GUIDE</h2>
+            <p class="text-lg mb-6 text-gray-700">This guide is designed to help you create the </p>
+            <div class="flex space-x-4">
+                <button class="px-6 py-3 border border-blue-600 text-blue-600 font-semibold rounded transition duration-300 ease-in-out hover:bg-blue-600 hover:text-white active:bg-blue-800">Start Your Transformation</button>
+            </div>
+        </div>
+        <div class="lg:w-1/2 p-8">
+            <img src="https://placehold.co/500x500" alt="Portrait of a confident person with a calm background." class="rounded shadow-lg">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="bg-blue-50 p-12 fade-in">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold mb-8 text-blue-600">EXPLORE OUR TRANSFORMATIONAL SERVICES</h2>
+        </div>
+        <div class="flex flex-col lg:flex-row justify-center space-y-6 lg:space-y-0 lg:space-x-12">
+            <!-- Service Card 1 -->
+            <div class="bg-white p-6 rounded shadow-lg text-center w-full lg:w-1/2 border-t-4 border-blue-600">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-600">FREE CONSULTATION</h3>
+                <p class="text-lg mb-4 text-gray-700">Use this area to describe one of your services.</p>
+                <p class="font-bold mb-4 text-gray-900">45 min</p>
+                <button class="mt-4 px-6 py-3 bg-blue-600 text-white font-semibold rounded transition duration-300 ease-in-out hover:bg-white hover:text-blue-600 active:bg-blue-800">Book It</button>
+            </div>
+            <!-- Service Card 2 -->
+            <div class="bg-white p-6 rounded shadow-lg text-center w-full lg:w-1/2 border-t-4 border-blue-600">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-600">ONLINE COACHING</h3>
+                <p class="text-lg mb-4 text-gray-700">Use this area to describe one of your services.</p>
+                <p class="font-bold mb-4 text-gray-900">1 hr - $70</p>
+                <button class="mt-4 px-6 py-3 bg-blue-600 text-white font-semibold rounded transition duration-300 ease-in-out hover:bg-white hover:text-blue-600 active:bg-blue-800">Book It</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel Section -->
+    <section class="bg-white p-12 fade-in">
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold text-blue-600">WHAT OUR CLIENTS SAY</h2>
+        </div>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <!-- Duplicate Last Slide -->
+                <div class="carousel-item bg-white p-6 rounded shadow-lg text-center border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Sarah Lee</h3>
+                    <p class="text-lg text-gray-700 mb-2">Entrepreneur</p>
+                    <p class="text-lg text-gray-700 mb-4">Age: 34</p>
+                    <p class="text-lg mb-4 text-gray-700">"Amazing experience! My self-confidence has skyrocketed, and I'm achieving more than ever before."</p>
+                    <p class="font-semibold text-gray-900">- Sarah Lee, Entrepreneur</p>
+                </div>
+                <!-- Testimonial 1 -->
+                <div class="carousel-item bg-white p-6 rounded shadow-lg text-center border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Jane Smith</h3>
+                    <p class="text-lg text-gray-700 mb-2">Marketing Director at CreativeCo</p>
+                    <p class="text-lg text-gray-700 mb-4">Age: 42</p>
+                    <p class="text-lg mb-4 text-gray-700">"This guide transformed my life. I gained the confidence I needed to pursue my dreams."</p>
+                    <p class="font-semibold text-gray-900">- Jane Smith, Marketing Director at CreativeCo</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="carousel-item bg-white p-6 rounded shadow-lg text-center border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Michael Brown</h3>
+                    <p class="text-lg text-gray-700 mb-2">Freelance Designer</p>
+                    <p class="text-lg text-gray-700 mb-4">Age: 29</p>
+                    <p class="text-lg mb-4 text-gray-700">"The self-image transformation techniques are powerful and effective. Highly recommend!"</p>
+                    <p class="font-semibold text-gray-900">- Michael Brown, Freelance Designer</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="carousel-item bg-white p-6 rounded shadow-lg text-center border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Sarah Lee</h3>
+                    <p class="text-lg text-gray-700 mb-2">Entrepreneur</p>
+                    <p class="text-lg text-gray-700 mb-4">Age: 34</p>
+                    <p class="text-lg mb-4 text-gray-700">"Amazing experience! My self-confidence has skyrocketed, and I'm achieving more than ever before."</p>
+                    <p class="font-semibold text-gray-900">- Sarah Lee, Entrepreneur</p>
+                </div>
+                <!-- Duplicate First Slide -->
+                <div class="carousel-item bg-white p-6 rounded shadow-lg text-center border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Jane Smith</h3>
+                    <p class="text-lg text-gray-700 mb-2">Marketing Director at CreativeCo</p>
+                    <p class="text-lg text-gray-700 mb-4">Age: 42</p>
+                    <p class="text-lg mb-4 text-gray-700">"This guide transformed my life. I gained the confidence I needed to pursue my dreams."</p>
+                    <p class="font-semibold text-gray-900">- Jane Smith, Marketing Director at CreativeCo</p>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control left" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control right" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- P.S. Section -->
+    <section class="bg-blue-600 text-white p-8 text-center fade-in">
+        <p class="text-xl font-semibold">P.S. Ready to transform your life? <a href="#" class="underline hover:text-blue-200">Get started today.</a></p>
+    </section>
+
+    <script>
+        let currentIndex = 1;
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+        const carouselInner = document.querySelector('.carousel-inner');
+
+        function updateCarouselPosition() {
+            const offset = -currentIndex * 100;
+            carouselInner.style.transition = 'transform 0.5s ease-in-out';
+            carouselInner.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            if (currentIndex >= totalSlides - 1) {
+                currentIndex++;
+                updateCarouselPosition();
+                setTimeout(() => {
+                    carouselInner.style.transition = 'none';
+                    currentIndex = 1; // Reset to the first real slide
+                    updateCarouselPosition();
+                }, 500);
+            } else {
+                currentIndex++;
+                updateCarouselPosition();
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex <= 0) {
+                currentIndex--;
+                updateCarouselPosition();
+                setTimeout(() => {
+                    carouselInner.style.transition = 'none';
+                    currentIndex = totalSlides - 2; // Reset to the last real slide
+                    updateCarouselPosition();
+                }, 500);
+            } else {
+                currentIndex--;
+                updateCarouselPosition();
+            }
+        }
+
+        function checkVisibility() {
+            const fadeIns = document.querySelectorAll('.fade-in');
+            fadeIns.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        document.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', () => {
+            checkVisibility();
+            updateCarouselPosition();
+        });
+    </script>
+
+</body>
+
+</html>
